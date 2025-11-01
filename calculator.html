@@ -12,7 +12,10 @@
         html {
             font-size: 1.5em;
         }
-
+        small{
+            font-size:10px;
+            line-height: 1.1;
+        }
         body,
         button,
         input {
@@ -44,13 +47,24 @@
         <button type="submit" id="clearScope">Clear Scope?</button>
     </div>
     <div>Calculator</div>
-    <form id="form">
-        <input type="text" id="input" placeholder="1+1">
-        <button type="submit">Equals?</button>
+    <form id="form" style="display:flex; ">
+        <input type="text" id="input" placeholder="1+1" style="flex-grow:1;">
+        <button type="submit">=</button>
     </form>
     <div id="error" style="color:red;"></div>
     <div id="output"></div>
     <div id="scope"></div>
+    <div>
+        <small>
+            <em>
+                If you refresh while offline, close and open the app to bring it back.
+                <br>
+                Scope doesnt save.
+                <br>
+                This is intended to be installed as a PWA - Add this to your home screen then choose the install option.
+            </em>
+        </small>
+    </div>
     <script>
         /**
          * Skipped minification because the original files appears to be already minified.
@@ -125,6 +139,10 @@
                 navigator.serviceWorker.register('./sw.js');
             }
         }
+
+        document.addEventListener("touchmove",(e)=>{
+            e.preventDefault();
+        });
     </script>
 
 </body>
