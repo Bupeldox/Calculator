@@ -1,0 +1,12 @@
+{
+  "short_name": "Calc",
+  "name": "Calculator",
+  "start_url": "/calculator.html",
+  "icons":[
+      "src":"/favicon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256 257x257"
+  ]
+  "display": "standalone",
+  "theme_color": "black",
+  "background_color": "white"
+}
