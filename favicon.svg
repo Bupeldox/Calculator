@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1" width="300px" height="300px" style="fill: none; width: 360px; height: 360px;">
-<g style="transform:translate(-90px, -30px); background-color:#fff;">
+<svg xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1" width="300px" height="300px" style="fill: none; width: 300px; height: 300px; background-color:#fff;">
+<g style="transform:translate(-90px, -30px);">
     <path d="" style="stroke-width: 15; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(106, 106, 106); fill: none;"/><path d="" style="stroke-width: 15; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(74, 74, 74); fill: none;"/><path d="M120,60 L120,60 L120,300 L360,300 L360,60 L120,60 M150,90 L150,90 L150,150 L330,150 L330,90 L150,90 M165,180 A15,15 0 0,0 150,195 A15,15 0 0,0 165,210 A15,15 0 0,0 180,195 A15,15 0 0,0 165,180 M225,195 A15,15 0 0,1 240,180 A15,15 0 0,1 255,195 A15,15 0 0,1 240,210 A15,15 0 0,1 225,195 M315,180 A15,15 0 0,1 330,195 A15,15 0 0,1 315,210 A15,15 0 0,1 300,195 A15,15 0 0,1 315,180 M165,240 A15,15 0 0,1 180,255 A15,15 0 0,1 165,270 A15,15 0 0,1 150,255 A15,15 0 0,1 165,240 M225,255 A15,15 0 0,1 240,240 A15,15 0 0,1 255,255 A15,15 0 0,1 240,270 A15,15 0 0,1 225,255 M300,255 A15,15 0 0,1 315,240 A15,15 0 0,1 330,255 A15,15 0 0,1 315,270 A15,15 0 0,1 300,255 M180,120 L180,120 L210,120 M300,120 L300,120 L285,120 M255,120 L255,120 L240,120 " style="stroke-width: 15; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(10, 10, 10); fill: none;"/>
 </g>
 </svg>
