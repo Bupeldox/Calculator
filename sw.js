@@ -1,16 +1,19 @@
 var cacheName = 'calculator-pwa';
 var filesToCache = [
+  '/',
   '/calculator.html'
 ];
+
+const addResourcesToCache = async (resources) => {
+  const cache = await caches.open(cacheName);
+  await cache.addAll(resources);
+};
 
 /* Start the service worker and cache all of the app's content */
 self.addEventListener('install', function(e) {
   e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.addAll(filesToCache);
-    })
-  );
-  self.skipWaiting();
+    addResourcesToCache(filesToCache)
+  )
 });
 
 /* Serve cached content when offline */
