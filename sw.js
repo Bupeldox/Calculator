@@ -1,4 +1,4 @@
-var cacheName = 'calculator-pwa';
+var cacheName = 'cpwa';
 var filesToCache = [
   '/',
   '/calculator.html'
@@ -16,11 +16,21 @@ self.addEventListener('install', function(e) {
   )
 });
 
-/* Serve cached content when offline */
-self.addEventListener('fetch', function(e) {
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
-  );
+
+const putInCache = async (request, response) => {
+  const cache = await caches.open(cacheName);
+  await cache.put(request, response);
+};
+const cacheFirst = async (request, event) => {
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+  const responseFromNetwork = await fetch(request);
+  event.waitUntil(putInCache(request, responseFromNetwork.clone()));
+  return responseFromNetwork;
+};
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(cacheFirst(event.request, event));
 });
