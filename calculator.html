@@ -49,7 +49,7 @@
     <div>Calculator</div>
     <form id="form" style="display:flex; ">
         <input type="text" id="input" placeholder="1+1" style="flex-grow:1;">
-        <button type="submit">=</button>
+        <button type="submit" style="padding:0 0.5rem;">=</button>
     </form>
     <div id="error" style="color:red;"></div>
     <div id="output"></div>
@@ -57,11 +57,13 @@
     <div>
         <small>
             <em>
-                If you refresh while offline, close and open the app to bring it back.
+                This is intended a PWA - Add this to your home screen then choose the install option.
+                <br>
+                If you refresh while offline, restart the app to fix it.
                 <br>
                 Scope doesnt save.
                 <br>
-                This is intended to be installed as a PWA - Add this to your home screen then choose the install option.
+                This uses <a href="https://mathjs.org/docs/reference/functions/evaluate.html">Math.js evaluate</a>
             </em>
         </small>
     </div>
